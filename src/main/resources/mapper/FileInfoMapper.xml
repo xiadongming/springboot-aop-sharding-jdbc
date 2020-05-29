@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.FileInfoMapper">
+
+    <insert id="insertFile" parameterType="com.example.demo.dto.FileInfo">
+	    insert into  file_info (`file_id`, `position`) VALUES (#{fileId},#{position})
+	</insert>
+  <select id="queryAll" resultType="com.example.demo.dto.FileInfo">
+	    select * from  file_info
+	</select>
+
+</mapper>
